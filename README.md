@@ -11,12 +11,12 @@
 인텐트에 slot filling을 핸들링하기 위한 파라미터를 정의하고, 
 웹훅 로직에서 지정한 수를 넘어서면 아래 중 하나의 방법으로 무한루프를 회피할 수 있다.
 
+- context 삭제
+- 다른 인텐트로 점프
+
 그리고 인텐트에 설정해야 하는 부분은 아래와 같다.  
 
 ![image](https://user-images.githubusercontent.com/51525202/90981834-30877a80-e59e-11ea-9892-5baaf86b0d49.png)
-
-- context 삭제
-- 다른 인텐트로 점프
 
 > Slot filling 기능을 사용하지 않고 webhook과 input context를 사용해서 변수를 채울 수도 있다.
 > 하지만 구현해본 결과 최대한 이런 형태의 인텐트 생성을 피하는게 좋을 것 같고 
