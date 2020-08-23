@@ -20,7 +20,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 	// 파라미터가 채워지지 않았을 경우
 	if(food === undefined || food === ''){
 		// 허용된 숫자
-		if(tryCnt < MAX_TRY_CNT){
+		if(tryCnt > MAX_TRY_CNT){
 			// Solution 1. 모든 Context 날리기
 			for (const ctx of agent.context) agent.context.delete(ctx.name);
 			
